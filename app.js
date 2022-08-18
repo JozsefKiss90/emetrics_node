@@ -12,7 +12,7 @@ app.use(express.static('public/esportmetrics'))
 const dbURI = process.env.mongoURI;
 mongoose.connect(dbURI)
 .then(()=>console.log('database connected'))
-.then(()=>app.listen(process.env.port || 3000))
+.then(()=>app.listen(process.env.PORT || 3000))
 .catch(err=>console.log(err))
 
 app.use(express.json()) 
