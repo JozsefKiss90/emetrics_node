@@ -16,5 +16,8 @@
     "jspsych": "^7.2.3",
     "mongoose": "^6.4.6",
     "nodemon": "^2.0.19"
+  },
+  "engines": { 
+    "node": "14.17.6" 
   }
 }
