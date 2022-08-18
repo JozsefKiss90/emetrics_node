@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" href="external.css">
+  </head>
+  <style media="screen">
+
+    input[type=text]{
+      width: 23%;
+      padding: 5px 12px;
+      margin: 8px 0;
+      display: inline-block;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      box-sizing: border-box;
+    }
+
+    select {
+      width: 23%;
+      padding: 5px 12px;
+      margin: 8px 0;
+      display: inline-block;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      box-sizing: border-box;
+    }
+
+    input[type=number] {
+      width: 8%;
+      padding: 5px 12px;
+      margin: 8px 0;
+      display: inline-block;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      box-sizing: border-box;
+    }
+
+    .forms {
+      border-radius: 10px;
+      background-color: white;
+      padding: 20px;
+      margin: auto;
+      margin-top: 60px;
+      width: 60%;
+      max-height: 40rem;
+      /*border: 3px solid #73AD21;*/
+
+    }
+
+    button[type=button] {
+      width: 20%;
+      background-color: #4CAF50;
+      color: white;
+      padding: 14px 20px;
+      margin: 8px 0;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 18px;
+    }
+
+    button[type=button]:hover {
+      background-color: green;
+
+    }
+  </style>
+  <body style="background-color:grey;">
+
+        <div class="forms">
+        <form id="myForm">
+          <p style="line-height: 0.01rem;  margin-bottom: 15px;"><strong>Válaszd ki melyik játékkal játszol <span style="font-size: 0.8rem; color:rgb(105, 105, 105);">*</span>:</strong></p>
+          <input type="checkbox" id="cs" name="genres1" value="Counter Strike" onClick="addRanks(this.id)">
+          <label for="cs">Counter Strike</label><br>
+          <div id="csForm"  style="display:none;">
+            <form>
+              <p style="line-height:5px; margin-top: 20px;  margin-bottom: 7px;">Válaszd ki jelenleg melyik ligában játszol:</p>
+             <select id="csRank" name="rank">
+               <option>Silver I</option>
+               <option>Silver II</option>
+               <option>Silver III</option>
+               <option>Silver IV</option>
+               <option>Silver Elite</option>
+               <option>Silver Elite Master</option>
+               <option>Gold Nova I</option>
+               <option>Gold Nova II</option>
+               <option>Gold Nova III</option>
+               <option>Gold Nova Master</option>
+               <option>Master Guardian I</option>
+               <option>Master Guardian II</option>
+               <option>Master Guardian Elite</option>
+               <option>Distinguished Master Guardian</option>
+               <option>Legendary Eagle</option>
+               <option>Legendary Master Eagle</option>
+               <option>Supreme Master First Class</option>
+               <option>Global Elite</option>
+             </select><br>
+           </form>
+           <form>
+            <p style="line-height:5px; margin-top: 20px;  margin-bottom: 7px;">Mi volt a legmagasabb elért rankod?</p>
+           <select id="csBestRank" name="bestRank">
+             <option>Silver I</option>
+             <option>Silver II</option>
+             <option>Silver III</option>
+             <option>Silver IV</option>
+             <option>Silver Elite</option>
+             <option>Silver Elite Master</option>
+             <option>Gold Nova I</option>
+             <option>Gold Nova II</option>
+             <option>Gold Nova III</option>
+             <option>Gold Nova Master</option>
+             <option>Master Guardian I</option>
+             <option>Master Guardian II</option>
+             <option>Master Guardian Elite</option>
+             <option>Distinguished Master Guardian</option>
+             <option>Legendary Eagle</option>
+             <option>Legendary Master Eagle</option>
+             <option>Supreme Master First Class</option>
+             <option>Global Elite</option>
+           </select><br>
+          </form>
+           <form>
+            <label for="gameTime">Hány órád van a játékban?</label><br>
+            <input id="csTime" type="number" id="gameTime" name="gameTime" value="0" min="0" max="10">
+            <a style="font-size: 0.9rem;" href="cs.html" target="_blank">Itt tudod megnézni</a>
+          </form>
+          </div>
+          <input type="checkbox" id="dota" name="genres2" value="Dota 2" onClick="addRanks(this.id)">
+          <label for="dota">Dota 2</label><br>
+          <div id="dotaForm"  style="display:none;">
+            <form>
+              <p style="line-height:5px; margin-top: 20px;  margin-bottom: 7px;">Válaszd ki jelenleg melyik ligában játszol:</p>
+             <select id="dotaRank" name="rank">
+               <option>Herald</option>
+               <option>Guardian</option>
+               <option>Crusader</option>
+               <option>Archon</option>
+               <option>Legend</option>
+               <option>Ancient</option>
+               <option>Divine</option>
+               <option>Immortal</option>
+             </select><br>
+           </form>
+           <form>
+            <p style="line-height:5px; margin-top: 20px;  margin-bottom: 7px;">Mi volt a legmagasabb elért rankod?</p>
+           <select id="dotaBestRank"  name="bestRank">
+            <option>Herald</option>
+            <option>Guardian</option>
+            <option>Crusader</option>
+            <option>Archon</option>
+            <option>Legend</option>
+            <option>Ancient</option>
+            <option>Divine</option>
+            <option>Immortal</option>
+           </select><br>
+          </form>
+           <form>
+            <label for="gameTime">Hány órád van a játékban?</label><br>
+            <input id="dotaTime" type="number" id="gameTime" name="gameTime" value="0" min="0" max="10">
+            <a style="font-size: 0.9rem;" href="cs.html" target="_blank">Itt tudod megnézni</a>
+          </form>
+          </div>
+          <input type="checkbox" id="lol" name="genres3" value="Leauge of Legends" onClick="addRanks(this.id)">
+          <label for="lol">Leauge of Legends</label><br>
+          <div id="lolForm" style="display: none;">
+            <form>
+              <p style="line-height:5px; margin-top: 20px;  margin-bottom: 7px;">Válaszd ki jelenleg melyik ligában játszol:</p>
+             <select id="lolRank" name="rank">
+               <option>Iron</option>
+               <option>Bronze</option>
+               <option>Silver</option>
+               <option>Gold</option>
+               <option>Platinum</option>
+               <option>Diamond</option>
+               <option>Master</option>
+               <option>Grandmaster</option>
+               <option>Challanger</option>
+             </select><br>
+           </form>
+           <form>
+            <p style="line-height:5px; margin-top: 20px;  margin-bottom: 7px;">Mi volt a legmagasabb elért rankod?</p>
+           <select id="lolBestRank" name="bestRank">
+             <option>Iron</option>
+             <option>Bronze</option>
+             <option>Silver</option>
+             <option>Gold</option>
+             <option>Platinum</option>
+             <option>Diamond</option>
+             <option>Master</option>
+             <option>Grandmaster</option>
+             <option>Challanger</option>
+           </select><br>
+          </form>
+           <form>
+            <label for="gameTime">Hány órád van a játékban?</label><br>
+            <input id="lolTime" type="number" id="gameTime" name="gameTime" value="0" min="0" max="10">
+            <a  style="font-size: 0.9rem;" href="lol.html" target="_blank">Itt tudod megnézni</a>
+          </form>
+          </div>
+          <input type="checkbox" id="fifa" name="genres4" value="FIFA" onClick="addRanks(this.id)">
+          <label for="fifa">FIFA</label><br>
+          <div id="fifaForm" style="display: none;">
+            <form>
+              <p style="line-height:5px; margin-top: 20px;  margin-bottom: 7px;">Válaszd ki jelenleg melyik ligában játszol:</p>
+             <select id="fifaRank" name="rank">
+               <option>Rank 1</option>
+               <option>Rank 2</option>
+               <option>Rank 3</option>
+               <option>Rank 4</option>
+               <option>Rank 5</option>
+               <option>Rank 6</option>
+               <option>Rank 7</option>
+               <option>Rank 8</option>
+               <option>Rank 9</option>
+               <option>Rank 10</option>
+             </select><br>
+           </form>
+           <form>
+            <p style="line-height:5px; margin-top: 20px;  margin-bottom: 7px;">Mi volt a legmagasabb elért rankod?</p>
+           <select id="fifaBestRank" name="bestRank">
+             <option>Rank 1</option>
+             <option>Rank 2</option>
+             <option>Rank 3</option>
+             <option>Rank 4</option>
+             <option>Rank 5</option>
+             <option>Rank 6</option>
+             <option>Rank 7</option>
+             <option>Rank 8</option>
+             <option>Rank 9</option>
+             <option>Rank 10</option>
+           </select><br>
+         </form>
+           <form>
+            <label for="gameTime">Hány órád van a játékban?</label><br>
+            <input id="fifaTime" type="number" id="gameTime" name="gameTime" value="0" min="0" max="10">
+            <a style="font-size: 0.9rem;" href="https://youtube.com" target="_blank">2</a>
+          </form>
+          </div>
+          <input type="checkbox" id="ow" name="genres5" value="Overwatch" onClick="addRanks(this.id)">
+          <label for="ow">Overwatch</label><br>
+          <div id="owForm" style="display: none;">
+            <form>
+              <p style="line-height:5px; margin-top: 20px;  margin-bottom: 7px;">Válaszd ki jelenleg melyik ligában játszol:</p>
+             <select id="owRank" name="rank">
+               <option>Bronze</option>
+               <option>Silver</option>
+               <option>Gold</option>
+               <option>Platinum</option>
+               <option>Diamond</option>
+               <option>Master</option>
+               <option>Grandmaster</option>
+             </select><br>
+           </form>
+           <form>
+            <p style="line-height:5px; margin-top: 20px;  margin-bottom: 7px;">Mi volt a legmagasabb elért rankod?</p>
+           <select id="owBestRank" name="bestRank">
+             <option>Bronze</option>
+             <option>Silver</option>
+             <option>Gold</option>
+             <option>Platinum</option>
+             <option>Diamond</option>
+             <option>Master</option>
+             <option>Grandmaster</option>
+           </select><br>
+          </form>
+           <form>
+            <label for="gameTime">Hány órád van a játékban?</label><br>
+            <input id="owTime" type="number" id="gameTime" name="gameTime" value="0" min="0" max="10">
+            <a id="owForm" style="font-size: 0.9rem;" href="ow.html" target="_blank">Itt tudod megnézni</a>
+          </form>
+          </div>
+          <input type="checkbox" id="sc" name="genres6" value="StarCraft" onClick="addRanks(this.id)">
+          <label for="sc">StarCraft</label>
+          <div id="scForm" style="display: none;">
+            <form>
+              <p style="line-height:5px; margin-top: 20px;  margin-bottom: 7px;">Válaszd ki jelenleg melyik ligában játszol:</p>
+             <select id="scRank" name="rank">
+               <option>Bronze</option>
+               <option>Silver</option>
+               <option>Gold</option>
+               <option>Platinum</option>
+               <option>Diamond</option>
+               <option>Master</option>
+               <option>Grandmaster</option>
+             </select><br>
+           </form>
+           <form>
+            <p style="line-height:5px; margin-top: 20px;  margin-bottom: 7px;">Mi volt a legmagasabb elért rankod?</p>
+           <select id="scBestRank" name="bestRank">
+             <option>Bronze</option>
+             <option>Silver</option>
+             <option>Gold</option>
+             <option>Platinum</option>
+             <option>Diamond</option>
+             <option>Master</option>
+             <option>Grandmaster</option>
+           </select><br>
+         </form>
+            <form>
+              <label for="gameTime">Hány órád van a játékban?</label><br>
+              <input id="scTime" type="number" id="gameTime" name="gameTime" value="0" min="0" max="10">
+              <a style="font-size: 0.9rem;" href="sc.html" target="_blank">Itt tudod megnézni</a>
+            </form>
+          </div>
+        </form>
+        <div style="margin-top: 10px; font-size: 0.8rem; color: rgb(105, 105, 105);">
+          *Amennyiben több játékban is van rankod, úgy több kategóriát is bejelölhetsz.
+        </div>
+        <form style="margin-top: 15px;" id="myForm_2">
+          <label for="age">Add meg az életkorod: </label><br>
+          <input type="number" id="age" name="age" value="18" min="10" max="100"><br>
+        </form>
+        <div id="consent">
+          <p id = "line">
+            A kutatás teljesen anonim módon történik. A megadott adatokon és a kísérlet eredményein kívül semmilyen további információ nem kerül felhasználásra.
+            Az alábbi gombra kattitva tudsz beleegyezni abba, hogy részt veszel a kutatásban.
+          </p>
+          <p>
+            <input type="checkbox" id="consent_checkbox" />
+            Hozzájárulok a kutatásban való részvételhez.
+          </p>
+        <button type="button" id="start">Kezdés</button>
+      </div>
+
+      </div>
+  </body>
+  <script src='js/jquery.min.js'></script>
+ <script>
+
+      var myValues = []
+
+      var csValues = {};
+      var dotaValues = {}
+      var lolValues = {};
+      var fifaValues = {};
+      var scValues = {};
+      var owValues = {};
+
+      var cs = document.getElementById("csForm")
+      var dota = document.getElementById("dotaForm")
+      var lol = document.getElementById("lolForm")
+      var fifa = document.getElementById("fifaForm")
+      var ow = document.getElementById("owForm")
+      var sc = document.getElementById("scForm")
+      
+      var csStyle = document.getElementById("cs")
+      var dotaStyle = document.getElementById("dota")
+      var lolStyle = document.getElementById("lol")
+      var fifaStyle = document.getElementById("fifa")
+      var scStyle = document.getElementById("sc")
+      var owStyle = document.getElementById("ow")
+
+      function addRanks(clicked_id) {
+      if (csStyle.checked === true && clicked_id == "cs") {
+          cs.style.removeProperty("display") 
+          csValues[csStyle.name] = csStyle.value;
+          csValues[document.getElementById("csRank").name] = document.getElementById("csRank").value
+          csValues[document.getElementById("csBestRank").name] = document.getElementById("csBestRank").value
+          csValues[document.getElementById("csTime").name] = document.getElementById("csTime").value
+          myValues.push(csValues)
+      }
+      else if (csStyle.checked === false) {
+          cs.style.display = "none";
+      }
+      if (dotaStyle.checked === true && clicked_id == "dota") {
+          dota.style.removeProperty("display")
+          dotaValues[dotaStyle.name] = dotaStyle.value;
+          dotaValues[document.getElementById("dotaRank").name] = document.getElementById("dotaRank").value
+          dotaValues[document.getElementById("dotaBestRank").name] = document.getElementById("dotaBestRank").value
+          dotaValues[document.getElementById("dotaTime").name] = document.getElementById("dotaTime").value
+          myValues.push(csValues)
+      }
+      else if (csStyle.checked === false) {
+          cs.style.display = "none";
+      }
+      if (lolStyle.checked === true && clicked_id == "lol") {
+          lol.style.removeProperty("display")
+          lolValues[lolStyle.name] = lolStyle.value;
+          lolValues[document.getElementById("lolRank").name] = document.getElementById("lolRank").value
+          lolValues[document.getElementById("lolBestRank").name] = document.getElementById("lolBestRank").value
+          lolValues[document.getElementById("lolTime").name] = document.getElementById("lolTime").value
+          myValues.push(lolValues)
+      }
+      else if (lolStyle.checked === false) {
+          lol.style.display = "none";
+      }
+      if (fifaStyle.checked === true) {
+        fifa.style.removeProperty("display")
+        fifaValues[fifaStyle.name] = fifaStyle.value;
+        fifaValues[document.getElementById("fifaRank").name] = document.getElementById("fifaRank").value
+        fifaValues[document.getElementById("fifaBestRank").name] = document.getElementById("fifaBestRank").value
+        fifaValues[document.getElementById("fifaTime").name] = document.getElementById("fifaTime").value
+        myValues.push(fifaValues)
+      }
+      else if (fifaStyle.checked === false) {
+        fifa.style.display = "none";
+      }
+      if (scStyle.checked === true) {
+        sc.style.removeProperty("display")
+        scValues[scStyle.name] = scStyle.value;
+        scValues[document.getElementById("scRank").name] = document.getElementById("scRank").value
+        scValues[document.getElementById("scBestRank").name] = document.getElementById("scBestRank").value
+        scValues[document.getElementById("scTime").name] = document.getElementById("scTime").value
+        myValues.push(scValues)
+      }
+      else if (scStyle.checked === false) {
+        sc.style.display = "none";
+      }
+      if (owStyle.checked === true) {
+        ow.style.removeProperty("display")
+        owValues[owStyle.name] = owStyle.value;
+        owValues[document.getElementById("owRank").name] = document.getElementById("owRank").value
+        owValues[document.getElementById("owBestRank").name] = document.getElementById("owBestRank").value
+        owValues[document.getElementById("owTime").name] = document.getElementById("owTime").value
+        myValues.push(owValues)
+      }
+      else if (owStyle.checked === false) {
+        ow.style.display = "none";
+      }
+    }
+ </script>
+</html>

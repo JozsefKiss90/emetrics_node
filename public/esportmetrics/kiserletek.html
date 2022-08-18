@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Esport Metrics</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css"
+    />
+    <link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="fontawesome-free-5.15.4-web/css/all.css">
+</head>
+<body class="bg-dark"> 
+    <nav class="nav navbar navbar-expand-lg bg-dark navbar-dark">
+        <div class="container">
+            <a style="font-size: 1.7rem;" href="index.html" class="navbar-brand">Esport Metrics</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navmenu">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse mt-3" id="navmenu">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item mx-2">
+                        <a style="color:rgba(255, 255, 255, 0.829)" href="#learn" class="nav-link">Kísérletek</a>
+                    </li>
+                    <li class="nav-item mx-2">
+                        <a href="informacio.html" class="nav-link">Információ</a>
+                    </li>
+                    <li class="nav-item mx-2">
+                        <a href="index.html#contact" class="nav-link">Kapcsolat</a>
+                    </li>
+                    <li class="nav-item mx-2">
+                        <a href="tudastar.html" class="nav-link">Tudástár</a>
+                    </li>
+                </ul>
+            
+            </div>
+        </div>
+    </nav>
+         <div class="container ">
+        <div  class="col-12">
+            <div  class="row d-flex justify-content-center py-2 mb-2 about-text">
+                <h3 style="text-align: center; color: white;" class="">
+                    Figyelmi hálózatok teszt
+                    </h3>      
+                <div style="background-color: white; border: 2px solid rgb(131, 131, 131); border-radius: 6px;"  class="col-lg-6 col-11 p-4">  
+                <p>A teszt a <a style="color: rgb(0, 110, 255);" href="networks.html">figyelmi hálózatok</a> hatékonyságát méri. A kísérletben a vizsgálati személy feladata egy jobbra vagy balra mutató nyíl irányának jelzése, a válasznak megfelelő gombok lenyomásával .</p>
+                <div style="font-size:1.5rem">
+                    <div>← ← ← ← ←</div>
+                    <div>— — → — —</div>
+                    <div>← ← → ← ←</div>
+                </div>
+                <p class="mt-3">Mindig a sor közepén lévő nyíl irányára kell válaszolni. <br> Teljesítési idő: 15 perc.</p> 
+                <a onclick="myFunction()" id="start" href="./networks/networks.html">
+                    <button class="btn btn-primary px-2">
+                    Kísérlet indítása
+                    </button>
+                </a>
+                <div>
+                    <p style="font-size: 0.9rem; color:red" id="warning" class="mt-3">
+                         
+                    </p>
+                </div>
+    
+                </div>  
+            </div>
+            
+        </div>
+        <div class="col-12"></div>
+    </div>
+    <div class="container">
+        <div  class="col-12">
+            <div  class="row d-flex justify-content-center py-2 mb-2 about-text">
+                <h3 style="text-align: center; color: white;" class="">
+                    Flanker teszt
+                    </h3>      
+                <div style="background-color: white; border: 2px solid rgb(131, 131, 131); border-radius: 6px;"  class="col-lg-6 col-11 p-4">  
+                <p>Figyelmi kapacitást mérő paradigma. A feladat a körökön belül egy előre meghatározott célinger megkeresése, valamint a minél gyorsabb válasz.</p>
+                <div style="font-size:1.5rem" class="d-flex justify-content-center">
+                    <img style="height:80%; width:80%;"  src="./images/examples_3.png" alt="" class="flanker-img">
+                </div>
+                <p class="mt-3"> A nehézséget a zavaró ingerek száma növeli.<br> Teljesítési idő: 20 perc.</p> 
+                <a onclick="myFunction()" id="start" href="./flanker/demo.html">
+                    <button class="btn btn-primary px-2">
+                    Kísérlet indítása
+                    </button>
+                </a>
+                <div>
+                    <p style="font-size: 0.9rem; color:red" id="warning" class="mt-3">
+                         
+                    </p>
+                </div>
+    
+                </div>  
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div  class="col-12">
+            <div  class="row d-flex justify-content-center pt-2 mb-4 about-text">
+                <h3 style="text-align: center; color: white;" class="">
+                    Szem-kéz koordinációs feladat
+                    </h3>      
+                <div style="background-color: white; border: 2px solid rgb(131, 131, 131); border-radius: 6px;"  class="col-lg-6 col-11 p-4">  
+                <p>A szem-kéz koordináció a szemmozgások kézreakcióval történő összehangolt irányítása. Minden körben két kört fogsz látni két egymásra merőleges tengelyen. 
+                    A körök a tengely mentén mozognak, és a cél az, hogy azok megálljanak a fehér szaggatott körön belül. 
+                </p>
+                <div style="font-size:1.5rem" class="d-flex justify-content-center">
+                    <img style="height:80%; width:80%;"  src="./images/circles.png" alt="" class="flanker-img">
+                </div>
+                <p class="mt-3"> A feladat 20 próbából áll, amik egyre nehezebbek lesznek.<br> Teljesítési idő: 5 perc.</p> 
+                <a onclick="myFunction()" id="start" href="./hand_eye/test.html">
+                    <button class="btn btn-primary px-2">
+                    Kísérlet indítása
+                    </button>
+                </a>
+                <div>
+                    <p style="font-size: 0.9rem; color:red" id="warning" class="mt-3">
+                         
+                    </p>
+                </div>
+    
+                </div>  
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div  class="col-12">
+            <div  class="row d-flex justify-content-center pb-2 mb-5 about-text">
+                <h3 style="text-align: center; color: white;" class="">
+                    Action per minute test
+                    </h3>      
+                <div style="background-color: white; border: 2px solid rgb(131, 131, 131); border-radius: 6px;"  class="col-lg-6 col-11 p-4">  
+                <p>Action per minute, avagy percenkénti cselekvés legfőképp a valós idejű stratégiában ismeretes kifejezés, ami a játékos által egy
+                    perc alatt kivitelezett cselevések számát jelöli. 
+                </p>
+                <div style="font-size:1.5rem" class="d-flex justify-content-center">
+                    <img style="height:80%; width:80%;"  src="./images/apm.png" alt="" class="flanker-img">
+                </div>
+                <p class="mt-3"> Kattints a számokra csökkenő sorrendben (50-től 1-ig), amilyen gyorsan csak tudsz.<br> Teljesítési idő: 1 perc.</p> 
+                <a onclick="myFunction()" id="start" href="./apm/index.html">
+                    <button class="btn btn-primary px-2">
+                    Kísérlet indítása
+                    </button>
+                </a>
+                <div>
+                    <p style="font-size: 0.9rem; color:red" id="warning" class="mt-3">
+                         
+                    </p>
+                </div>
+    
+                </div>  
+            </div>
+        </div>
+    </div>
+    <footer  class="p-3 text-white text-center postition-relative foot-col">
+        <div class="container">
+            <a href="" class="postion-absolute bottom-0 end-0 p-1">
+                <i class="bi bi-arrow-up-circle h1"></i>
+            </a>
+            <p class="lead py-1">
+                Esport Metrics 2021 
+            </p>
+           
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+    <script>
+      document.getElementById("start").href = "#";  
+      var w = window.innerWidth;
+        var h = window.innerHeight;
+        if (w < 1000 && h < 2000) {
+            function myFunction() { 
+        document.getElementById("warning").innerHTML ="* A kísérlet csak nagyképernyős monitoron teljesíthető." 
+            }
+      }
+      else {
+        document.getElementById("start").href = "./networks/networks.html";
+      }
+      
+    </script>
+</body>
+</html>

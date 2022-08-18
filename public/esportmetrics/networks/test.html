@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel='stylesheet' type='text/css' href='jspsych.css'>
+<link rel='stylesheet' type='text/css' href='default_style.css'>
+<link rel='stylesheet' type='text/css' href='style.css'>
+    <title>Document</title>
+</head>
+
+<body>
+    <div class = centerbox> <div class="flex-container"> <p class = center-block-text>Köszönöm, hogy teljesítetted a feladatot!</p> </div> <div class="flex-container-2"> <p id="corr"> </p> <p id="rt"></p> </div> <div style="display: block; position:relative; bottom: 100px;"> <p style="text-align: center; font-size: 1.3rem;"> Az email címedre hamarosan elküldjük a kutatás eredményét, amiből megtudhatod, hol állsz a többi résztvevőhöz képest.</p><p style="text-align: center;"><img src="images/chart.png" alt=""></p></div> <div class="flex-container"> <p class = center-block-text><a style="text-align:center;  line-height: 30px; text-decoration: none;" href="https://esportmetrics.hu/kiserletek.html" >esportmetrics.hu</a></p></div></div>
+</body>
+<script>
+    var first = sessionStorage.getItem("first");
+    function loadDoc() {
+        const xhttp = new XMLHttpRequest();
+        xhttp.onload = function() {
+            console.log(JSON.parse(this.responseText))
+            var correct = JSON.parse(this.responseText);
+            document.getElementById('corr').innerHTML = `Helyes válaszok: </br> ${Math.floor(correct[1])}%`,
+            document.getElementById('rt').innerHTML = `Átlagos válaszidő: </br> ${Math.floor(correct[2])}%`,
+            sessionStorage.removeItem("first");
+            sessionStorage.clear();
+        }
+        xhttp.open("GET", `data/experiment_data_${first}.json`);
+        xhttp.send();
+        }
+      loadDoc()    
+</script>
+</html>
