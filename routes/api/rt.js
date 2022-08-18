@@ -1,6 +1,5 @@
 const express = require('express');
 const router = express.Router();
-const uuid = require('uuid')
 const RT_test = require('../../models/rt')
 
 router.get('/', (req, res) => {
