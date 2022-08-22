@@ -204,3 +204,8 @@
 #jspsych-data-display {
   text-align: left;
 }
+
+ #jspsych-instructions-nav {
+  position: absolute;
+  margin: auto auto auto auto;
+}

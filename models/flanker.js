@@ -9,6 +9,18 @@ const flankerSchema = new Schema ({
     acc : {
         type: Number,
         required: true
+    },
+    name : {
+        type: String,
+        required: false
+    },
+    loads : {
+        type: Object,
+        required: true
+    },
+    survey : {
+        type: String,
+        required: false
     }
 },{timestamps:true})
 
