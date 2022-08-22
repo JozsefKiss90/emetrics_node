@@ -68,8 +68,6 @@ var jsPsych = initJsPsych({
     var trials = jsPsych.data.get().filter({task: 'response'});
     var name = jsPsych.data.get().filter({trial_type: 'survey-html-form'});
     var correct_trials = trials.filter({correct: true});
-    var congruents = correct_trials.filter({flanker_type: "congruent"});
-    var incongruents = correct_trials.filter({flanker_type: "incongruent"});
     var accuracy = Math.round(correct_trials.count() / trials.count() * 100);
     var rt = Math.round(correct_trials.select('rt').mean());
     var survey = jsPsych.data.get().filter({trial_type :'survey-text'}).trials[0].response.Q0;
@@ -79,7 +77,8 @@ var jsPsych = initJsPsych({
     var data = {
       rTime : rt, 
       acc : accuracy,
-      name : name.trials[0].response[0].value,
+      //name : name.trials[0].response[0].value,
+      name : "",
       loads : loads,
       survey : survey, 
     }
@@ -134,7 +133,7 @@ var instructions = {
   pages: ["Üdvözöllek a kísérletben.", 
   ` 
     <div style='position : relative; height:460px; '>
-    <p>Ebben a kísérletben, a képernyőn láthatő körökön belül különböző alakzatok jelennek meg.</p><p>A feladatod jelezni, hogy a  körökön belül 
+    <p>Ebben a kísérletben a képernyőn látható körökön belül különböző alakzatok jelennek meg.</p><p>A feladatod jelezni, hogy a  körökön belül 
     egy négyzet vagy egy rombusz található-e.</p>
     <p>Ha  négyzet, nyomd meg a billentyűzeten az <strong>F</strong>-t, ha rombusz akkor pedig nyomd meg a <strong>J</strong>-t.</p>
     <div style='float: left;'><img src='img/left_1.png'></img>
@@ -473,14 +472,14 @@ for (r = 0; r < rotations.length; r++) {
 
 
 test_stimuli = shuffleArray(test_stimuli)
-var block1_trials = test_stimuli.slice(0, 31)
+var block1_trials = test_stimuli.slice(0, 3)
 var block2_trials = test_stimuli.slice(32, 50)
 var block3_trials = test_stimuli.slice(51, 60)
 var block4_trials = test_stimuli.slice(8, 10)
 var block5_trials = test_stimuli.slice(128, 160)
 var block6_trials = test_stimuli.slice(160, 192)
 //block2_trials, block3_trials, block4_trials, block5_trials, block6_trials
-blocks = [block1_trials, block2_trials]
+blocks = [block1_trials]
 practice_block = [block3_trials]
 console.log(block3_trials)
 var respArr = []
@@ -546,7 +545,7 @@ for (i = 0; i < practice_block.length; i++) {
       timeline_variables: practice_block[i],
     };
 
-  timeline.push(pratice_procedure);
+  //timeline.push(pratice_procedure);
 
   var end_block = {
     type: jsPsychHtmlKeyboardResponse,
@@ -653,6 +652,14 @@ var debrief_block = {
   }
 };
 timeline.push(debrief_block);
+
+var exit_fullscreen = {
+  type: jsPsychFullscreen,
+  fullscreen_mode: false,
+  delay_after: 0
+}
+
+timeline.push(exit_fullscreen);
 
   /*function saveData(name, data) {
     var xhr = new XMLHttpRequest();
