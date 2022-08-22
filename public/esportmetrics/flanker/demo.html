@@ -83,7 +83,7 @@ var jsPsych = initJsPsych({
       survey : survey, 
     }
     console.log(data)
-    const endpoint = 'http://localhost:3000/api/flanker'
+    const endpoint = 'https://esport-metrics.herokuapp.com/api/flanker'
     //jsPsych.data.displayData(),
     fetch(endpoint, {
             method: "POST",
