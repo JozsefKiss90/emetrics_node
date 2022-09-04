@@ -481,7 +481,7 @@ var block6_trials = test_stimuli.slice(160, 192)
 //block2_trials, block3_trials, block4_trials, block5_trials, block6_trials
 blocks = [block1_trials, block2_trials]
 practice_block = [block3_trials]
-console.log(block3_trials)
+console.log(test_stimuli)
 var respArr = []
 
 for (i = 0; i < practice_block.length; i++) {
@@ -499,7 +499,7 @@ for (i = 0; i < practice_block.length; i++) {
       type: jsPsychHtmlKeyboardResponse,
       stimulus: jsPsych.timelineVariable('stimulus'),
       choices: "NO_KEYS",
-      trial_duration: 100
+      trial_duration: 3000,
     };
 
     var pratice_display = {
@@ -517,6 +517,7 @@ for (i = 0; i < practice_block.length; i++) {
       on_finish: function(data){
         data.correct = jsPsych.pluginAPI.compareKeys(data.response, data.correct_response);
         data.rt = jsPsych.data.getLastTrialData().trials[0].rt;
+        console.log(data.flanker_type)
       }
     };
 
@@ -671,7 +672,6 @@ timeline.push(exit_fullscreen);
 /* start the experiment */
 jsPsych.run(timeline);
 
-    
+  
   </script>
 </html>
-

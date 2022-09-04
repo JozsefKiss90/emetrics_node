@@ -167,3 +167,55 @@ for (i = 0; i < practice.length; i++) {
           data.correct = jsPsych.pluginAPI.compareKeys(data.response, data.correct_response);
         }
       };*/
+
+      
+      /*var newElement2 = document.createElementNS("http://www.w3.org/2000/svg", 'text');
+      newElement2.textContent =  "W"
+      newElement2.setAttributeNS(null, 'x', '300'); 
+      newElement2.setAttributeNS(null, 'y', '468');
+      newElement2.setAttributeNS(null, 'style', 'fill:red; font-size:50px;');
+      newElement2.setAttributeNS(null, 'text-anchor', "middle");
+      svg.appendChild(newElement2);
+
+      var newElement3 = document.createElementNS("http://www.w3.org/2000/svg", 'text');
+      newElement3.textContent =  "O"
+      newElement3.setAttributeNS(null, 'x', '170'); 
+      newElement3.setAttributeNS(null, 'y', '242');
+      newElement3.setAttributeNS(null, 'style', 'fill:red; font-size:50px;');
+      newElement3.setAttributeNS(null, 'text-anchor', "middle");
+      svg.appendChild(newElement3);
+
+      var newElement4 = document.createElementNS("http://www.w4.org/2000/svg", 'text');
+      newElement4.textContent =  "Z"
+      newElement4.setAttributeNS(null, 'x', '430'); 
+      newElement4.setAttributeNS(null, 'y', '242');
+      newElement4.setAttributeNS(null, 'style', 'fill:red; font-size:50px;');
+      newElement4.setAttributeNS(null, 'text-anchor', "middle");
+      svg.appendChild(newElement4);
+
+      var newElement5 = document.createElementNS("http://www.w4.org/2000/svg", 'text');
+      newElement5.textContent =  "S"
+      newElement5.setAttributeNS(null, 'x', '170'); 
+      newElement5.setAttributeNS(null, 'y', '392');
+      newElement5.setAttributeNS(null, 'style', 'fill:red; font-size:50px;');
+      newElement5.setAttributeNS(null, 'text-anchor', "middle");
+      svg.appendChild(newElement5);
+
+      var newElement6 = document.createElementNS("http://www.w4.org/2000/svg", 'text');
+      newElement6.textContent =  "H"
+      newElement6.setAttributeNS(null, 'x', '430'); 
+      newElement6.setAttributeNS(null, 'y', '392');
+      newElement6.setAttributeNS(null, 'style', 'fill:red; font-size:50px;');
+      newElement6.setAttributeNS(null, 'text-anchor', "middle");
+      svg.appendChild(newElement6);*/
+
+          //var locations = [['570', '318'], ['570', '318'], ['570', '318'], ['0', '318'], ['0', '318'], ['0', '318']]ű
+
+    /*newElement.removeAttributeNS(null, 'x', locAttributes[i][0]); 
+          newElement.removeAttributeNS(null, 'y', locAttributes[i][1]);
+          newElement.removeAttributeNS(null, 'style', 'fill:red; font-size:50px;');
+          newElement.removeAttributeNS(null, 'text-anchor', "middle");
+          newElement2.removeAttributeNS(null, 'x', locAttribute2[0]); 
+          newElement2.removeAttributeNS(null, 'y', locAttribute2[1]);
+          newElement2.removeAttributeNS(null, 'style', 'fill:red; font-size:50px;');
+          newElement2.removeAttributeNS(null, 'text-anchor', "middle");*/
