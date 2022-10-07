@@ -635,7 +635,7 @@ for (r = 0; r < distractors.length; r++) {
 }
 
 test_stimuli = shuffleArray(test_stimuli)
-var block1_trials = test_stimuli.slice(0, 1)
+var block1_trials = test_stimuli.slice(0, 31)
 var block2_trials = test_stimuli.slice(32, 50)
 var block3_trials = test_stimuli.slice(51, 60)
 var block4_trials = test_stimuli.slice(8, 10)
@@ -644,8 +644,8 @@ var block6_trials = test_stimuli.slice(160, 192)
 
 //block2_trials, block3_trials, block4_trials, block5_trials, block6_trials
 //blocks = [block1_trials, block2_trials]
-blocks = [block1_trials]
-practice_block = [block1_trials]
+blocks = [block1_trials, block2_trials]
+practice_block = [block3_trials]
 console.log(test_stimuli)
 var respArr = []
 
