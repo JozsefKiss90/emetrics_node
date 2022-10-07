@@ -11,12 +11,13 @@ router.get('/', (req, res) => {
 
 router.post('/', (req,res) =>{
     console.log(req.body)
-    const newRt = new flanker_test({
+    const newRt = new flanker_test({ 
         rt : req.body.rTime,
-        acc : req.body.acc,
+        acc : req.body.acc, 
         name : req.body.name,
         loads : req.body.loads,
-        survey : req.body.survey
+        survey : req.body.survey,
+        stim : 'betu'
       })
     newRt.save()
     .then(results=> res.json(results)) 

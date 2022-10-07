@@ -21,6 +21,10 @@ const flankerSchema = new Schema ({
     survey : {
         type: String,
         required: false
+    },
+    stim : {
+        type: String,
+        required: false
     }
 },{timestamps:true})
 
